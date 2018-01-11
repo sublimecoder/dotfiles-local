@@ -1,0 +1,9 @@
+if type nvim > /dev/null 2>&1; then
+  alias vim='MIX_ENV=edit nvim'
+  alias vi='MIX_ENV=edit nvim'
+  alias v='MIX_ENV=edit nvim'
+fi
+
+export PATH="$HOME/.bin:$PATH"
+
+export PATH="/usr/local/opt/qt@5.5/bin:$PATH"

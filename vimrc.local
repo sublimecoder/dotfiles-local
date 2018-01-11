@@ -1,0 +1,54 @@
+colorscheme jellybeans
+
+" Resize windows with arrow keys
+nnoremap <D-Up> <C-w>+
+nnoremap <D-Down> <C-w>-
+nnoremap <D-Left> <C-w><
+nnoremap <D-Right>  <C-w>>
+
+" hit ,f to find the definition of the current class
+" this uses ctags. the standard way to get this is Ctrl-]
+nnoremap <silent> ,f <C-]>
+
+" use ,F to jump to tag in a vertical split
+nnoremap <silent> ,F :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
+
+" Better key maps for switching between controller and view
+nnoremap ,vv :Eview<cr>
+nnoremap ,cc :Econtroller<cr>
+
+" Support for github flavored markdown
+" via https://github.com/jtratner/vim-flavored-markdown
+augroup markdown
+  au!
+  au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END
+
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+set number                     " Show current line number
+set relativenumber             " Show relative line numbers
+
+" allow dot command to operate over a visual selection
+xnoremap . :normal .<CR>
+
+" allow user macro over a visual selection
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction
+
+map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
+map <Leader>i mmgg=G`m
+map <Leader>bb :!bundle install<cr>
+vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
+map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
+
+set hlsearch
+set ignorecase
+set smartcase
+map <Leader>h :nohlsearch<cr>
+
+let g:jsx_ext_required = 0
