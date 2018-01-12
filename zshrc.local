@@ -1,7 +1,7 @@
 if type nvim > /dev/null 2>&1; then
-  alias vim='MIX_ENV=edit nvim'
-  alias vi='MIX_ENV=edit nvim'
-  alias v='MIX_ENV=edit nvim'
+  alias vim='MIX_ENV=test nvim'
+  alias vi='MIX_ENV=test nvim'
+  alias v='MIX_ENV=test nvim'
 fi
 
 export PATH="$HOME/.bin:$PATH"
