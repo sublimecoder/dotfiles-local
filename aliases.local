@@ -1,6 +1,4 @@
 alias todo='$EDITOR ~/.todo'
-alias gclean="git branch | grep -v -E (master|staging) | xargs git branch -D"
-alias g-update-all="ls | xargs -P10 -I{} git -C {} pull"
 
 # Handle the fact that this file will be used with multiple OSs
 platform=`uname`
@@ -28,6 +26,10 @@ alias d='cd ~/dotfiles'
 alias dbprep='rdm && rdtp'
 alias drop='cd ~/Dropbox'
 alias fs='bundle install && foreman start'
+alias gclean="git branch | grep -v -E (master|staging) | xargs git branch -D"
+alias gua="ls | xargs -P10 -I{} git -C {} pull"
+alias gmc-staging="ls | xargs -P10 -I{} git -C {} checkout staging"
+alias gmc-master="ls | xargs -P10 -I{} git -C {} checkout master"
 alias gad='git add --all .'
 alias gag='git add . && git commit --amend --no-edit && git push -f'
 alias gbc='gdc'
