@@ -1,5 +1,6 @@
 alias todo='$EDITOR ~/.todo'
 alias gclean="git branch | grep -v -E (master|staging) | xargs git branch -D"
+alias g-update-all="ls | xargs -P10 -I{} git -C {} pull"
 
 # Handle the fact that this file will be used with multiple OSs
 platform=`uname`
@@ -88,7 +89,7 @@ alias tail-logs='heroku logs -t'
 alias track='git checkout -t'
 alias trs='tmux rename-session'
 alias u='cd ..'
-alias w='cd ~/code/upcase-exercises'
+# alias w='cd ~/code/upcase-exercises'
 
 # Heroku staging
 alias staging-console='heroku run console --remote staging'
