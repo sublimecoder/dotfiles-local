@@ -91,6 +91,11 @@ alias tail-logs='heroku logs -t'
 alias track='git checkout -t'
 alias trs='tmux rename-session'
 alias u='cd ..'
+alias mgd='mix deps.get'
+alias mt='mix test'
+alias mdu='mix deps.update --all'
+alias mps='mix phx.server'
+alias ism='iex -S mix'
 # alias w='cd ~/code/upcase-exercises'
 
 # Heroku staging
