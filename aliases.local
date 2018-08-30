@@ -96,6 +96,7 @@ alias mt='mix test'
 alias mdu='mix deps.update --all'
 alias mps='mix phx.server'
 alias ism='iex -S mix'
+alias repry='fc -e - mix\ test=iex\ -S\ mix\ test\ --trace mix\ test'
 # alias w='cd ~/code/upcase-exercises'
 
 # Heroku staging
