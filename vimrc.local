@@ -46,7 +46,7 @@ map <Leader>bb :!bundle install<cr>
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 map <Leader>d :vs ~/.todo<cr>
-nmap <leader>i orequire IEx; IEx.pry<esc>
+nmap <leader>f orequire IEx; IEx.pry<esc>
 
 set hlsearch
 set ignorecase
