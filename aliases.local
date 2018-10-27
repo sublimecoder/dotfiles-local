@@ -25,6 +25,7 @@ alias c='cd'
 alias d='cd ~/dotfiles'
 alias dbprep='rdm && rdtp'
 alias drop='cd ~/Dropbox'
+alias todo='vim ~/Dropbox/Notes/todo.md'
 alias fs='bundle install && foreman start'
 alias gclean="git branch | grep -v -E (master|staging) | xargs git branch -D"
 alias gua="ls | xargs -P10 -I{} git -C {} pull"
@@ -97,6 +98,7 @@ alias mps='mix phx.server'
 alias ism='iex -S mix'
 alias repry='fc -e - mix\ test=iex\ -S\ mix\ test\ --trace mix\ test'
 alias itk='cd ~/code/itk/'
+
 
 # Heroku staging
 alias staging-console='heroku run console --remote staging'
