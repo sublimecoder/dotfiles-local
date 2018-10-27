@@ -26,6 +26,7 @@ alias d='cd ~/dotfiles'
 alias dbprep='rdm && rdtp'
 alias drop='cd ~/Dropbox'
 alias todo='vim ~/Dropbox/Notes/todo.md'
+alias start='vim ~/Dropbox/Notes/day-start-checklist.md'
 alias fs='bundle install && foreman start'
 alias gclean="git branch | grep -v -E (master|staging) | xargs git branch -D"
 alias gua="ls | xargs -P10 -I{} git -C {} pull"
