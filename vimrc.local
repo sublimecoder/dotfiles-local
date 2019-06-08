@@ -42,6 +42,13 @@ vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 map <Leader>d :vs ~/Dropbox/Notes/todo.md<cr>
 nmap <leader>f orequire IEx; IEx.pry<esc>
+map <Leader>sn :UltiSnipsEdit<CR>
+
+" --------- Snippets -------------------------
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsEditSplit="vertical"
+" -------------------------------------------
 
 set hlsearch
 set ignorecase
