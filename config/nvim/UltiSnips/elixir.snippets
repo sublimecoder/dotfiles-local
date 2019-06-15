@@ -54,6 +54,14 @@ test "${1:description}" do
 end
 endsnippet
 
+snippet desc "add a description block" !b
+describe "${1:description}" do
+	test "${1:test description}" do
+		$0
+	end
+end
+endsnippet
+
 snippet if "add an if block" !b
 if ${1:condition} do
   $0
