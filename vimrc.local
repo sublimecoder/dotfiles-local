@@ -44,11 +44,11 @@ map <Leader>d :vs ~/Dropbox/Notes/todo.md<cr>
 nmap <leader>f orequire IEx; IEx.pry<esc>
 map <Leader>sn :UltiSnipsEdit<CR>
 
-" --------- Snippets -------------------------
+"--------- Snippets -------------------------
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<Leader>c"
 let g:UltiSnipsEditSplit="vertical"
-" -------------------------------------------
+"-------------------------------------------
 
 set hlsearch
 set ignorecase
