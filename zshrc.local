@@ -13,4 +13,5 @@ export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/jsmith/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
-eval "$(direnv hook bash)"
+eval "$(direnv hook zsh)"
+
