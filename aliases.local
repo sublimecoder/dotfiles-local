@@ -28,14 +28,9 @@ alias dbprep='rdm && rdtp'
 alias drop='cd ~/Dropbox'
 alias todo='vim ~/Dropbox/Notes/todo.md'
 alias start='vim ~/Dropbox/Notes/day-start-checklist.md'
-alias itk-notes='vim ~/Dropbox/Notes/itk-notes.md'
-alias om-notes='vim ~/Dropbox/Notes/one-month-notes.md'
-alias ps-notes='vim ~/Dropbox/Notes/popsocial-notes.md'
 alias notes="cd ~/Dropbox/Notes ; vim ."
-alias popsocial='cd ~/code/pop_social'
-alias itk='cd ~/code/itk'
-alias onemonth='cd ~/code/onemonth'
 alias code='cd ~/code'
+alias blockfi='cd ~/code/blockfi'
 alias fs='bundle install && foreman start'
 alias gclean="git branch | grep -v -E (master|staging) | xargs git branch -D"
 alias gua="ls | xargs -P10 -I{} git -C {} pull"
@@ -117,7 +112,6 @@ alias production-console='heroku run console --remote production'
 alias production-tail='heroku logs --tail --remote production'
 
 # # Heroku databases
-
 alias db-pull-staging='development restore staging'
 alias db-pull-production='development restore production'
 alias db-copy-production-to-staging='staging restore production'
