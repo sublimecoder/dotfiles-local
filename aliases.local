@@ -39,6 +39,7 @@ alias gclean="git branch | grep -v -E (master|staging|develop) | xargs git branc
 alias gua="ls | xargs -P10 -I{} git -C {} pull"
 alias gmc-staging="ls | xargs -P10 -I{} git -C {} checkout staging"
 alias gmc-master="ls | xargs -P10 -I{} git -C {} checkout master"
+alias gmc-develop="ls | xargs -P10 -I{} git -C {} checkout develop"
 alias gad='git add --all .'
 alias gag='git add . && git commit --amend --no-edit && git push -f'
 alias gbc='gdc'
