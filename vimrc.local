@@ -47,6 +47,7 @@ map <Leader>sn :UltiSnipsEdit<CR>
 "--------- Snippets -------------------------
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 let g:UltiSnipsExpandTrigger="<C-c>"
+let g:UltiSnipsListSnippets="<c-s-n>"
 let g:UltiSnipsEditSplit="vertical"
 "-------------------------------------------
 
