@@ -4,14 +4,22 @@ if type nvim > /dev/null 2>&1; then
   alias v='MIX_ENV=test nvim'
 fi
 
-. `brew --prefix`/etc/profile.d/z.sh
-
 export PATH="$HOME/.bin:$PATH"
 
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
 
-# heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH=/Users/jsmith/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+if [ -d "/Users/jsmith/" ]
+then
+    echo "Loading Home Config"
+    export PATH="/usr/local/opt/grep/libexec/gnubin:/Users/jsmith/.emacs.d/bin:$PATH"
+    # heroku autocomplete setup
+    HEROKU_AC_ZSH_SETUP_PATH=/Users/jsmith/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+
+else
+    echo "Loading Work Config"
+    export PATH="/usr/local/opt/grep/libexec/gnubin:/Users/jared/.emacs.d/bin:$PATH"
+    HEROKU_AC_ZSH_SETUP_PATH=/Users/jared/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+fi
 
 eval "$(direnv hook zsh)"
 
