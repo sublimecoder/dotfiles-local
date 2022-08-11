@@ -12,5 +12,5 @@
 [heroku]
 	account = personal
 
-[includeIf "gitdir:~/code/blockfi/"]
+[includeIf "gitdir:~/code/AAMP/"]
   path = ~/.gitconfig-work.local
