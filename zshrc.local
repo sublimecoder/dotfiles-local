@@ -23,3 +23,4 @@ export PATH="$HOME/.bin:$PATH"
 
 eval "$(direnv hook zsh)"
 
+export PATH="$PATH:/opt/homebrew/Cellar/rabbitmq/3.11.2/sbin/"
