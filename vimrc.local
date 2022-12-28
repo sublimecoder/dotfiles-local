@@ -1,3 +1,26 @@
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+" recommended configurations for powerline
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
+let g:Powerline_symbols = 'fancy'
+
+" Turn on auto-indenting and set it to copy previous
+" indentation
+set autoindent
+set copyindent
+
+" testing strategy for vim-test
+" let test#strategy = "tslime"
+" let test#strategy = "vimterminal"
+let test#strategy = "vimux"
+let g:tslime_always_current_session = 1
+let g:tslime_always_current_window = 1
+
+" Highlight matching parentheses
+set showmatch
+
 colorscheme jellybeans
 
 " Resize windows with arrow keys
@@ -13,11 +36,10 @@ nnoremap <silent> ,f <C-]>
 " use ,F to jump to tag in a vertical split
 nnoremap <silent> ,F :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
 
-" Better key maps for switching between controller and view
-nnoremap ,vv :Eview<cr>
-nnoremap ,cc :Econtroller<cr>
-
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+" Remove trailing white spaces on save.
+autocmd BufWritePre * :%s/\s\+$//e
 
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
@@ -40,16 +62,8 @@ map <Leader>i mmgg=G`m
 map <Leader>bb :!bundle install<cr>
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
-map <Leader>d :vs ~/Dropbox/Notes/todo.md<cr>
+map <Leader>d :vs ~/code/Notes/todo.md<cr>
 nmap <leader>f orequire IEx; IEx.pry<esc>
-map <Leader>sn :UltiSnipsEdit<CR>
-
-"--------- Snippets -------------------------
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
-let g:UltiSnipsExpandTrigger="<C-c>"
-let g:UltiSnipsListSnippets="<c-s-n>"
-let g:UltiSnipsEditSplit="vertical"
-"-------------------------------------------
 
 set hlsearch
 set ignorecase
@@ -59,3 +73,46 @@ map <Leader>h :nohlsearch<cr>
 let g:jsx_ext_required = 0
 let g:mix_format_on_save = 1
 let g:python3_host_prog = '/usr/local/bin/python3'
+
+" vim elixir formatter
+let g:mix_format_on_save = 1
+let g:mix_format_silent_errors = 1
+let g:mix_format_options = '--check-equivalent'
+
+
+let g:ale_linters = {
+      \  'elixir': ['credo', 'elixir-ls'],
+      \  'ruby': ['prettier', 'solargraph'],
+      \  'javascript': ['prettier', 'eslint', 'tsserver'],
+      \  'typescript': ['prettier', 'eslint', 'tsserver'],
+\}
+
+let g:ale_fixers = {
+      \  '*': ['remove_trailing_lines', 'trim_whitespace'],
+      \  'javascript': ['prettier'],
+      \  'typescript': ['prettier'],
+      \  'html': ['prettier'],
+      \  'ruby': ['prettier'],
+\}
+
+let g:ale_elixir_elixir_ls_config = {
+      \   'elixirLS': {
+      \     'dialyzerEnabled': v:false,
+      \   },
+      \}
+
+let g:ale_fix_on_save = 1
+
+" Kill Beeps
+set noeb vb t_vb=
+
+" gist-vim configurations
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
+
+" help formatting json
+com! FormatJson %!python -m json.tool
+
+" Some tslime mappings
+vmap <Leader>mt <Plug>SendSelectionToTmux
+nmap <Leader>mt <Plug>NormalModeSendToTmux

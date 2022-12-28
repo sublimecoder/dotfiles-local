@@ -1,6 +1,6 @@
 [alias]
   l = log --pretty=colored
-  dms = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative master..staging 
+  dms = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative master..staging
 
 [pretty]
   colored = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset
@@ -8,6 +8,7 @@
 [user]
   name = Jared Smith
   email = jared.smith88@me.com
+  signingkey = CC41D9AEA18817CB
 
 [heroku]
 	account = personal

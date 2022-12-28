@@ -4,19 +4,9 @@ if type nvim > /dev/null 2>&1; then
   alias v='MIX_ENV=test nvim'
 fi
 
-
-# OSX specific
-if [[ "$(sysctl -n machdep.cpu.brand_string)" == "Apple M1 Pro" ]]; then
-    export PATH="$PATH:/opt/homebrew/bin"
-    export PATH="/Users/jsmith/.emacs.d/bin:$PATH"
-    . /opt/homebrew/opt/asdf/libexec/asdf.sh
-  else
-    export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
-    export PATH="/usr/local/opt/grep/libexec/gnubin:/Users/jsmith/.emacs.d/bin:$PATH"
-    # heroku autocomplete setup
-    HEROKU_AC_ZSH_SETUP_PATH=/Users/jsmith/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
-
-  fi
+export PATH="$PATH:/opt/homebrew/bin"
+export PATH="/Users/jsmith/.emacs.d/bin:$PATH"
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 export PATH="$HOME/.bin:$PATH"
 
