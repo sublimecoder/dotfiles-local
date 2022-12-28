@@ -21,6 +21,8 @@ let g:tslime_always_current_window = 1
 " Highlight matching parentheses
 set showmatch
 
+syntax enable
+set background=dark
 colorscheme jellybeans
 
 " Resize windows with arrow keys
