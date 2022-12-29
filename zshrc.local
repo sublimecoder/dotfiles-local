@@ -2,7 +2,7 @@ alias vim='MIX_ENV=test nvim'
 alias vi='MIX_ENV=test nvim'
 alias v='MIX_ENV=test nvim'
 
-export PATH="$PATH:/opt/homebrew/bin"
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="/Users/jsmith/.emacs.d/bin:$PATH"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
