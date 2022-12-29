@@ -1,10 +1,9 @@
-if type nvim > /dev/null 2>&1; then
-  alias vim='MIX_ENV=test nvim'
-  alias vi='MIX_ENV=test nvim'
-  alias v='MIX_ENV=test nvim'
-fi
+alias vim='MIX_ENV=test nvim'
+alias vi='MIX_ENV=test nvim'
+alias v='MIX_ENV=test nvim'
 
 export PATH="$PATH:/opt/homebrew/bin"
+export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="/Users/jsmith/.emacs.d/bin:$PATH"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
