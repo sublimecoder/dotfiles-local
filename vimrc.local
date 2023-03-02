@@ -42,6 +42,7 @@ nnoremap <silent> ,f <C-]>
 nnoremap <silent> ,F :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufNewFile,BufRead DockerQA set filetype=dockerfile
 
 " Remove trailing white spaces on save.
 autocmd BufWritePre * :%s/\s\+$//e
