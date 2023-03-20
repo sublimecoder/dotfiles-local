@@ -1,6 +1,6 @@
-alias vim='MIX_ENV=test nvim'
-alias vi='MIX_ENV=test nvim'
-alias v='MIX_ENV=test nvim'
+alias vim='MIX_ENV=test LAVENDER_ENV=test nvim'
+alias vi='MIX_ENV=test LAVENDER_ENV=test nvim'
+alias v='MIX_ENV=test LAVENDER_ENV=test nvim'
 
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
