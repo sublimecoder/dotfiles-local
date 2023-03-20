@@ -6,14 +6,6 @@ alias -g L='| less'
 alias -g M='| more'
 alias aliases='vim ~/.aliases.local'
 alias amend="git commit --amend"
-alias bdp='production deploy'
-alias bds='staging deploy'
-alias be='bundle exec'
-alias bi='bundle install -j 8'
-alias br='bin/rspec'
-alias bsf='bin/rspec spec/features'
-alias bu='bundle update'
-alias bunbang='bundle install && !!'
 alias c='cd'
 alias d='cd ~/dotfiles'
 alias dl='cd ~/dotfiles-local'
@@ -22,9 +14,6 @@ alias todo='vim ~/code/Notes/todo.md'
 alias start='vim ~/code/Notes/day-start-checklist.md'
 alias notes="cd ~/code/Notes ; vim ."
 alias code='cd ~/code'
-alias lavender='cd ~/.asdf/installs/golang/1.20/packages/src/lavender'
-alias go-packages="cd ~/.asdf/installs/golang/1.20/packages"
-alias fs='bundle install && foreman start'
 alias gclean="git branch | grep -v -E (main|master|staging|develop) | xargs git branch -D"
 alias gua="ls | xargs -P10 -I{} git -C {} pull"
 alias gmc-staging="ls | xargs -P10 -I{} git -C {} checkout staging"
@@ -44,36 +33,20 @@ alias gdm='git diff master'
 alias gg='git lg'
 alias gom-done="git-on-master && gpf && git-done"
 alias gp='git push'
-alias gph='git push heroku'
 alias gpr='git pull --rebase'
 alias gpush='echo "Use gp!" && git push'
 alias grc='git rebase --continue'
 alias gs='git show'
-alias h='sync'
-alias herkou='heroku'
-alias hpr='hub pull-request'
-alias hpush='git push heroku'
-alias irb='irb --readline -r irb/completion'
-alias killruby='killall -9 ruby'
-alias killrudy='killruby'
 alias m='git checkout master'
 alias mm='git checkout main'
 alias mastre='master'
 alias newscreen="tmux"
-alias pc='production-console'
-alias prepdb='dbprep'
-alias rc='bin/rails console'
-alias rdm="bin/rake db:migrate"
-alias rdtp="bin/rake db:test:prepare RAILS_ENV=test"
-alias reguard='killall -9 ruby ; guard'
-alias remigrate='rake db:migrate && rake db:migrate:redo && rake db:schema:dump && rake db:test:prepare'
 alias remore='!! | more'
 alias repush="gpr && git push"
 alias rerake='!! && rake'
 alias restart_postgres="stoppostgres && startpostgres"
 alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
 alias review="git diff master"
-alias rs='bundle check && rails server -p 3000'
 alias safepush='git pull --rebase && mix deps.get && git push'
 alias sc='staging-console'
 alias shpush='rake && hpush'
@@ -84,10 +57,11 @@ alias ss='spring stop'
 alias stage='git push staging head:master && staging open'
 alias startredis='redis-server /usr/local/etc/redis.conf &'
 alias sync='git add -u . && git commit -m "Minor changes. Commit message skipped." && repush'
-alias tail-logs='heroku logs -t'
 alias track='git checkout -t'
 alias trs='tmux rename-session'
 alias u='cd ..'
+
+# Elixir Aliases
 alias mdg='mix deps.get'
 alias mt='mix test'
 alias mdu='mix deps.update --all'
@@ -95,16 +69,9 @@ alias mps='mix phx.server'
 alias ism='iex -S mix'
 alias repry='fc -e - mix\ test=iex\ -S\ mix\ test\ --trace mix\ test'
 
-
-# Heroku staging
-alias staging-console='heroku run console --remote staging'
-alias staging-tail='heroku logs --tail --remote staging'
-
-# Heroku production
-alias production-console='heroku run console --remote production'
-alias production-tail='heroku logs --tail --remote production'
-
-# # Heroku databases
-alias db-pull-staging='development restore staging'
-alias db-pull-production='development restore production'
-alias db-copy-production-to-staging='staging restore production'
+# Go-lang Aliases
+alias go-update="go get -u ./..."
+alias go-update-tests="go get -t -u ./..."
+alias go-list-updates="go list -u -m all"
+alias lavender='cd ~/.asdf/installs/golang/1.20/packages/src/lavender'
+alias go-packages="cd ~/.asdf/installs/golang/1.20/packages"
