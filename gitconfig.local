@@ -12,6 +12,3 @@
 
 [heroku]
 	account = personal
-
-[includeIf "gitdir:~/code/work/"]
-  path = ~/.gitconfig-work.local
