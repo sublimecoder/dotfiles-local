@@ -97,6 +97,7 @@ let g:ale_fixers = {
       \  '*': ['remove_trailing_lines', 'trim_whitespace'],
       \  'javascript': ['prettier'],
       \  'typescript': ['prettier'],
+      \  'css': ['prettier'],
       \  'html': ['prettier'],
       \  'ruby': ['prettier'],
 \}
@@ -107,6 +108,8 @@ let g:ale_elixir_elixir_ls_config = {
       \   },
       \}
 
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 
 " gist-vim configurations
@@ -126,6 +129,8 @@ nnoremap <leader>xt :call popup_clear()<cr>
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor\ --ignore={\"vendor\*\"\,\"node_modules\*\"}
+
   " Use ag in fzf for listing files. Lightning fast and respects .gitignore
   let $FZF_DEFAULT_COMMAND = 'ag --literal --files-with-matches --nocolor --hidden -g "" --ignore={"vendor*","node_modules*"}'
 endif
