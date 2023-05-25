@@ -44,6 +44,8 @@ nnoremap <silent> ,F :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufRead DockerQA set filetype=dockerfile
 autocmd BufNewFile,BufRead DockerTest set filetype=dockerfile
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 " Remove trailing white spaces on save.
 autocmd BufWritePre * :%s/\s\+$//e
