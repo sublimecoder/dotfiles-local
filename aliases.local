@@ -70,8 +70,11 @@ alias ism='iex -S mix'
 alias repry='fc -e - mix\ test=iex\ -S\ mix\ test\ --trace mix\ test'
 
 # Go-lang Aliases
-alias go-update="go get -u ./..."
-alias go-update-tests="go get -t -u ./..."
-alias go-list-updates="go list -u -m all"
+alias gup="go get -u ./..."
+alias gup-tests="go get -t -u ./..."
+alias glist="go list -u -m all"
 alias lavender='cd ~/.asdf/installs/golang/1.20/packages/src/lavender'
+alias dashboard='cd ~/code/lavender/Lavender-Dashboard/dashboard'
 alias go-packages="cd ~/.asdf/installs/golang/1.20/packages"
+alias gts="gotestsum"
+alias go-test="go test -v ./..."
