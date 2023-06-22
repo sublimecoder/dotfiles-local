@@ -78,3 +78,4 @@ alias dashboard='cd ~/code/lavender/Lavender-Dashboard/dashboard'
 alias go-packages="cd ~/.asdf/installs/golang/1.20/packages"
 alias gts="gotestsum"
 alias go-test="go test -v ./..."
+alias killGO='lsof -t -i :5000 | xargs kill -9'
