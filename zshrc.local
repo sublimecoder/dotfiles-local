@@ -13,8 +13,8 @@ eval "$(direnv hook zsh)"
 
 export PATH="$PATH:/opt/homebrew/Cellar/rabbitmq/3.11.2/sbin/"
 
-export GOPATH=$(go env GOPATH)
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+export GOPATH=$(go env GOPATH)
 
 export PATH="$PATH:$GOPATH/bin"
 
