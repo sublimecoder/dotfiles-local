@@ -8,7 +8,12 @@
 [user]
   name = Jared Smith
   email = jared.smith88@me.com
-  signingkey = F81028E6EA5CD754
 
 [heroku]
 	account = personal
+
+[includeIf "gitdir:~/code/lavender/"]
+  path = ~/.gitconfig-work.local
+
+[include]
+  path = ~/.git_signing_key.local
