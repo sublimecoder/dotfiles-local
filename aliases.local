@@ -73,9 +73,9 @@ alias repry='fc -e - mix\ test=iex\ -S\ mix\ test\ --trace mix\ test'
 alias gup="go get -u ./..."
 alias gup-tests="go get -t -u ./..."
 alias glist="go list -u -m all"
-alias lavender='cd ~/.asdf/installs/golang/1.21.0/packages/src/lavender'
+alias lavender='cd ~/.asdf/installs/golang/1.22.0/packages/src/lavender'
 alias dashboard='cd ~/code/lavender/Lavender-Dashboard'
-alias go-packages="cd ~/.asdf/installs/golang/1.21.0/packages"
+alias go-packages="cd ~/.asdf/installs/golang/1.22.0/packages"
 alias gts="gotestsum"
 alias go-test="go test -v ./..."
 alias killGO='lsof -t -i :5000 | xargs kill -9'
