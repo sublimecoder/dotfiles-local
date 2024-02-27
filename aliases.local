@@ -1,4 +1,4 @@
-alias todo='$EDITOR ~/.todo'
+# alias todo='$EDITOR ~/.todo'
 
 alias a='ls -lrthG'
 alias -g G='| grep'
@@ -31,7 +31,6 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 alias gdm='git diff master'
 alias gg='git lg'
-alias gom-done="git-on-master && gpf && git-done"
 alias gp='git push'
 alias gpr='git pull --rebase'
 alias gpush='echo "Use gp!" && git push'
@@ -43,17 +42,13 @@ alias mastre='master'
 alias newscreen="tmux"
 alias remore='!! | more'
 alias repush="gpr && git push"
-alias rerake='!! && rake'
 alias restart_postgres="stoppostgres && startpostgres"
 alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
 alias review="git diff master"
 alias safepush='git pull --rebase && mix deps.get && git push'
-alias sc='staging-console'
-alias shpush='rake && hpush'
 alias so='source ~/.aliases'
 alias sp='safepush'
 alias squash='git rebase -i master'
-alias ss='spring stop'
 alias stage='git push staging head:master && staging open'
 alias startredis='redis-server /usr/local/etc/redis.conf &'
 alias sync='git add -u . && git commit -m "Minor changes. Commit message skipped." && repush'
