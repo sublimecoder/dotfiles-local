@@ -46,6 +46,9 @@ autocmd BufNewFile,BufRead DockerQA set filetype=dockerfile
 autocmd BufNewFile,BufRead DockerTest set filetype=dockerfile
 autocmd BufNewFile,BufRead DockerQA-B set filetype=dockerfile
 autocmd BufNewFile,BufRead HistoricalSyncDockerfile set filetype=dockerfile
+autocmd BufRead,BufNewFile *.ex,*.exs set filetype=elixir
+autocmd BufRead,BufNewFile *.eex,*.heex,*.leex,*.sface,*.lexs set filetype=eelixir
+autocmd BufRead,BufNewFile mix.lock set filetype=elixir
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
