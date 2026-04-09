@@ -95,25 +95,26 @@ let g:mix_format_options = '--check-equivalent'
 
 let g:ale_linters = {
       \  'elixir': ['credo', 'elixir-ls'],
-      \  'ruby': ['prettier', 'solargraph'],
-      \  'javascript': ['prettier', 'eslint', 'tsserver'],
-      \  'typescript': ['prettier', 'eslint', 'tsserver'],
+      \  'ruby': ['solargraph'],
+      \  'javascript': ['eslint', 'tsserver'],
+      \  'typescript': ['eslint', 'tsserver'],
 \}
 
 let g:ale_fixers = {
       \  '*': ['remove_trailing_lines', 'trim_whitespace'],
-      \  'javascript': ['prettier'],
-      \  'typescript': ['prettier'],
-      \  'css': ['prettier'],
-      \  'html': ['prettier'],
-      \  'ruby': ['prettier'],
-\}
+      \  'javascript': ['eslint'],
+      \  'typescript': ['esling'],
+      \  'css': ['eslint'],
+      \  'html': ['eslint'],
+      \  'ruby': ['eslint'],
+      \  'elixir': ['mix_format'],
+      \}
 
 let g:ale_elixir_elixir_ls_config = {
-      \   'elixirLS': {
-      \     'dialyzerEnabled': v:false,
-      \   },
-      \}
+\   'cmd': ['elixir-ls'],
+\   'mix_env': 'dev',
+\   'dialyzer_enabled': v:false,
+\}
 
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_save = 1

@@ -1,6 +1,5 @@
 Plug 'nanotech/jellybeans.vim'
 Plug 'tpope/vim-markdown'
-Plug 'mhinz/vim-mix-format'
 Plug 'preservim/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mattn/gist-vim'
@@ -8,4 +7,3 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'leafgarland/typescript-vim'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'github/copilot.vim'
