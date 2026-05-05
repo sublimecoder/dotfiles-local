@@ -2,10 +2,12 @@ alias vim='MIX_ENV=test LAVENDER_ENV=test nvim'
 alias vi='MIX_ENV=test LAVENDER_ENV=test nvim'
 alias v='MIX_ENV=test LAVENDER_ENV=test nvim'
 
+export ASDF_DATA_DIR="$HOME/.asdf"
+export PATH="${ASDF_DATA_DIR}/shims:$PATH"
+
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="/Users/jsmith/.emacs.d/bin:$PATH"
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 export PATH="$HOME/.bin:$PATH"
 
@@ -14,7 +16,6 @@ eval "$(direnv hook zsh)"
 export PATH="$PATH:/opt/homebrew/Cellar/rabbitmq/3.11.2/sbin/"
 
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
-export GOPATH=$(go env GOPATH)
 
 export PATH="$PATH:$GOPATH/bin"
 
